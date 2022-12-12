@@ -1,0 +1,34 @@
+{
+  "Produto": [
+    {
+      "nome": "Papel Origami 15 x 15 Liso",
+      "quantidade": 4,
+      "preco_compra": 15,
+      "porcentagem": 10,
+      "preco_venda": 16.5,
+      "fornecedor": "Daiso",
+      "id": 5
+    },
+    {
+      "nome": "Papel Origami 15 x 15 estampado",
+      "quantidade": 2,
+      "preco_compra": 10,
+      "porcentagem": 12,
+      "preco_venda": 11.2,
+      "fornecedor": "Daiso",
+      "id": 6
+    }
+  ],
+  "Fornecedor": [
+    {
+      "razao_social": "Daiso Ltda",
+      "cnpj": 1472583690001,
+      "contato": "sac_daiso@daiso.com.br",
+      "endereco": "21940030",
+      "logradouro": "Rua General Mário Hermes",
+      "bairro": "Jardim Guanabara",
+      "localidade": "Rio de Janeiro",
+      "id": 2
+    }
+  ]
+}

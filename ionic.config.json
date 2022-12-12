@@ -1,0 +1,7 @@
+{
+  "name": "iCruds",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,50 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>{{ editable ? 'Editar' : 'Register Products'}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{ editable ? 'Edit product' : 'Product registration'}}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <form [formGroup]="productForm" fullscreen (submit)="[]">
+      <ion-list lines="full" class="ion-no-margin ion-no-padding">
+        <ion-item-group>
+          <ion-item-divider>
+            <ion-label>Product</ion-label>
+          </ion-item-divider>
+          <ion-item>
+            <ion-label position="stacked">Product's name</ion-label>
+            <ion-input formControlName="name" type="text" required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Amount</ion-label>
+            <ion-input formControlName="amount" type="number" required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Purchase price</ion-label>
+            <ion-input formControlName="purchasePrice" type="number" required></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Percentage on sale</ion-label>
+            <ion-input formControlName="percentage" type="number" required></ion-input>
+          </ion-item>
+            <ion-input formControlName="priceSale" [value]="calculateSale()" hidden></ion-input>
+          <ion-item>
+            <ion-select placeholder="Provider"  formControlName="provider">
+              <ion-select-option value=""></ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-item-group>
+      </ion-list>
+      <div class="ion-padding">
+        <ion-button [disabled]="productForm.invalid" expand="block" type="submit" class="ion-no-margin">
+          {{ 'Register' }}
+        </ion-button>
+      </div>
+    </form>
+  </ion-content>
+</ion-content>
