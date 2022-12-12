@@ -62,7 +62,7 @@ export class Tab1Page implements OnInit {
 
     this.productService.insertProduct(newProduct)
     .subscribe({
-      next: (result:any) => {
+      next: (result: any) => {
 
         this.productForm.reset();
         console.info('[AddProduct]', result);
@@ -70,7 +70,7 @@ export class Tab1Page implements OnInit {
 
       },
 
-      error: (error:any) => { console.log(error) }
+      error: (error: any) => { console.log(error) }
     });
   }
 
